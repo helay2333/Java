@@ -43,8 +43,6 @@ public class GetExcel {
         int idx = file.lastIndexOf(".");
         String preName = file.substring(0, idx );
         String xlsx = file.substring(idx);
-        System.out.println(preName);
-        System.out.println(xlsx);
         if(xlsx.equals(".xlsx")){
             xlsx = ".xls";
         }
