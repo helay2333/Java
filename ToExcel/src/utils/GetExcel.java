@@ -35,7 +35,6 @@ public class GetExcel {
             String gender = sheet.getCell(j++, i).getContents();
             Integer score = Integer.valueOf(sheet.getCell(j++, i).getContents());
             Student stu = new Student(classes,card,name,gender,score);
-            System.out.println(stu);
             list.add(stu);
         }
         return list;
