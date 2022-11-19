@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="jquery.min.js"></script>
+<script type="text/javascript">
+    $(function(){
+        $("button").click(function(){
+            var username = $("#username").val()
+            var password = $("#password").val()
+            var sex = $("input:radio:checked").val()
+            var select = $("#as").val()
+            var hobby = ""
+            $.each($("input:checkbox:checked"),function(){
+                hobby = hobby + $(this).val() + " "
+            })
+            alert(username+"\n"+password+"\n"+sex+"\n"+select+"\n"+hobby)
+           
+        })
+    })
+</script>
+<style>
+    table{
+        width: 320px;
+    }
+    .zhu{
+        color: red;
+        width: 100%;
+        font-size: 20px;
+        text-align: center;
+    }
+    .btn{
+        text-align: right;
+    }
+</style>
+</head>
+<body>
+<form action="" id="form1">
+    <table border="1">
+        <tr>
+            <td colspan="2"><div class="zhu">注册</div></td>
+        </tr>
+        <tr>
+            <td><div class="btn">用户名：</div></td>
+            <td><input type="text"/ id="username"></td>
+        </tr>
+        <tr>
+            <td><div class="btn">密码：</div></td>
+            <td><input type="password" id="password"/></td>
+        </tr>
+        <tr>
+            <td><div class="btn">性别：</div></td>
+
+            <td>
+
+                <input name="sex" type="radio" value="男" checked="checked"/>男
+
+                <input name="sex" type="radio" value="女"/>女
+            </td>
+            
+        </tr>
+        <tr>
+            <td>
+                <div class="btn">学历:</div>
+                </td>
+            <td>
+                <select name="select" id="as">
+                <option value="研究生">研究生</option>
+                <option value="本科">本科</option>
+                <option value="专科">专科</option>
+                <option value="其他">其他</option>
+              </select>
+            </td>
+        </tr>
+<tr>
+        <tr>
+            <td><div class="btn">爱好：</div></td>
+            <td>
+                <input name="hobby" type="checkbox" value="读书"/>读书
+                <input name="hobby" type="checkbox" value="游戏"/>游戏
+                <input name="hobby" type="checkbox" value="追番"/>追番
+                <input name="hobby" type="checkbox" value="敲代码"/>敲代码
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <div class="btn"><button onclick="Sub()">提交</button></div>
+                
+            </td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>

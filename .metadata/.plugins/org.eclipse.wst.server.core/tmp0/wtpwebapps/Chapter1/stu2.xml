@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE students SYSTEM "stu2.dtd">
+<students>
+	<student number="l0226" name="zhouyufei" sex="male" friend="l0228"></student>
+	<student number="l0228" name="zhou" sex="female" friend="l0226"></student>
+</students>

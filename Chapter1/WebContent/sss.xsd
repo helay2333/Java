@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/sss" xmlns:tns="http://www.example.org/sss" elementFormDefault="qualified">
+	<element name="students">
+		<complexType> 
+		
+			<sequence maxOccurs="2">
+				<element name="student">
+					<complexType>
+						<sequence>
+							<element name="number" type="string"></element>
+							<element name="name" type="string"></element>
+							<element name="age" type="int"></element>
+						</sequence>
+					</complexType>
+				</element>
+			</sequence>
+		</complexType>
+	</element>
+</schema>

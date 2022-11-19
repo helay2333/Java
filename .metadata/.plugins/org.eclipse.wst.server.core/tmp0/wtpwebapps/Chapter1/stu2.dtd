@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT students (student+)>
+<!ELEMENT student EMPTY>
+<!ATTLIST student number ID #REQUIRED>
+<!ATTLIST student name CDATA #REQUIRED>
+<!ATTLIST student sex (male | female) "male">
+<!ATTLIST student friend IDREF #IMPLIED>
