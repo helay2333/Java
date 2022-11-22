@@ -1,3 +1,5 @@
+package com.zxx.Five;
+
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -14,11 +16,11 @@ import java.io.IOException;
 public class RequestForwardServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-//        resp.setContentType("text/html;charset=utf-8");
-//        req.setAttribute("name", "周羽飞");
-//        RequestDispatcher dispatcher = req.getRequestDispatcher("/requestServlet");
-//        dispatcher.forward(req, resp);
-        resp.sendRedirect("https://www.sogou.com");
+       resp.setContentType("text/html;charset=utf-8");
+       req.setAttribute("name", "周羽飞");
+       RequestDispatcher dispatcher = req.getRequestDispatcher("/resultServlet");
+       dispatcher.forward(req, resp);
+//         resp.sendRedirect("https://www.sogou.com");
     }
 
     @Override
