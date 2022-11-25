@@ -22,23 +22,21 @@ public class SearchLike extends HttpServlet {
         Connection conn = null;
         Statement stmt = null;
         ResultSet rs = null;
-        ArrayList<User> list=new ArrayList<User>();
+        ArrayList<Person> list=new ArrayList<Person>();
         try {
             conn = JDBCUtils.getConnection();
             stmt = conn.createStatement();
-            String sql = "select * from students where card like '%" + num+"'";
+            String sql = "select * from person";
             rs = stmt.executeQuery(sql);
 
             while (rs.next()) {
-                User user = new User();
-                user.setStudentNum(rs.getString("card"));
-                user.setUsername(rs.getString("name"));
-                user.setScore(rs.getInt("score"));
-                System.out.println(user);
-                list.add(user);
+                Person person = new Person();
+                person.setId(rs.getInt("id"));
+                person.setUsername(rs.getString("username"));
+                person.setPassword(rs.getString("password"));
+                list.add(person);
             }
-            System.out.println(list);
-            req.setAttribute("users",list);
+            req.setAttribute("person",list);
             req.getRequestDispatcher("/list.jsp").forward(req,resp);
         } catch (Exception e) {
             e.printStackTrace();

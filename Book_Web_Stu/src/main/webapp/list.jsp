@@ -8,8 +8,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8"%>
 <%@ page import="com.zxx.excu.User" %>
-<%@ page isELIgnored= %>
-<%@ taglib uri="http://"false"java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ page isELIgnored="false"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -20,15 +20,17 @@
 
 <table border="1">
     <tr>
-        <td>学号</td>
-        <td>姓名</td>
-        <td>成绩</td>
+        <td>ID</td>
+        <td>账号</td>
+        <td>密码</td>
+        <td>修改</td>
     </tr>
-    <c:forEach var="user" items="${requestScope.users}" varStatus="status">
+    <c:forEach var="person" items="${requestScope.person}" varStatus="status">
         <tr>
-            <td>${user.studentNum}</td>
-            <td>${user.name}</td>
-            <td>${user.score}</td>
+            <td>${person.id}</td>
+            <td>${person.username}</td>
+            <td>${person.password}</td>
+            <td><a href="/update?id=${person.id}">修改</a></td>
         </tr>
     </c:forEach>
 </table>
