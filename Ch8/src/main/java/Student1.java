@@ -37,6 +37,7 @@ public class Student1 {
         int count = 8;
         count = count >> 1;
         System.out.println(count);
+
     }
 }
 
